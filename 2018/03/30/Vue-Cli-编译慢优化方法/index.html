@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" >
     <meta name="baidu-site-verification" content="dIcXMeY8Ya" />
     
-    <title>浩哥的博客</title>
+    <title>Vue Cli 编译慢优化方法 | 浩哥的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
     <meta name="keywords" content="Android, 前端开发, Vue,React-Native" >
     <meta name="description" content="Jelon个人前端小站" >
@@ -56,7 +56,7 @@
         <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
         <ul class="menu hidden" id="JELON__menu">
             
-            <li rel="/index.html" class="item current">
+            <li rel="/2018/03/30/Vue-Cli-编译慢优化方法/index.html" class="item ">
                 <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
             </li>
             
@@ -103,51 +103,18 @@
     <div class="container body clearfix">
         <section class="content">
             <div class="content-main widget">
-                <!-- 首页 -->
-
-    
-    <h3 class="widget-hd">
-        <strong>
-            
-                最近动态
-            
-        </strong>
-    </h3>
-    
-        <!-- 文章 -->
-<article class="post">
-    <header>
-        <!-- 标签这有且只能显示一个 -->
-        
-        <a class="cat-link" href="/categories/Vue/">Vue</a>
-        
-        <!-- 文章标题 -->
-        
-    <h3 class="post-title">
-    	<a href="http://yoursite.com/2018/03/30/Vue-Cli-编译慢优化方法/">
-    		Vue Cli 编译慢优化方法
-    	</a>
-    </h3>
-
+                <!-- 文章页 -->
+<!-- 文章 -->
+<article class="post article">
+    <header class="text-center">
+        <h3 class="post-title"><span>Vue Cli 编译慢优化方法</span></h3>
     </header>
-    <p class="post-meta">
+    <p class="post-meta text-center">
         Jhzhu 发表于
         <time datetime="2018-03-30T13:17:21.000Z">2018-03-30</time>
-        &nbsp;&nbsp;
-        <span class="post-tags">
-            标签：
-            
-    
-        <a href="/tags/Vue优化/" title="Vue优化">Vue优化</a>
-    
-
-        </span>
     </p>
-
     <div class="post-content">
-        <div class="post-excerpt">
-            
-                <h1 id="关于Vue-Cli-，项目变大时，编译慢的优化方案，有更好的方案的请赐教，非常感谢"><a href="#关于Vue-Cli-，项目变大时，编译慢的优化方案，有更好的方案的请赐教，非常感谢" class="headerlink" title="关于Vue Cli ，项目变大时，编译慢的优化方案，有更好的方案的请赐教，非常感谢"></a>关于Vue Cli ，项目变大时，编译慢的优化方案，有更好的方案的请赐教，非常感谢</h1><blockquote>
+        <h1 id="关于Vue-Cli-，项目变大时，编译慢的优化方案，有更好的方案的请赐教，非常感谢"><a href="#关于Vue-Cli-，项目变大时，编译慢的优化方案，有更好的方案的请赐教，非常感谢" class="headerlink" title="关于Vue Cli ，项目变大时，编译慢的优化方案，有更好的方案的请赐教，非常感谢"></a>关于Vue Cli ，项目变大时，编译慢的优化方案，有更好的方案的请赐教，非常感谢</h1><blockquote>
 <p>参考<a href="https://segmentfault.com/a/1190000010043013#articleHeader1" target="_blank" rel="noopener">链接一</a>、<a href="https://www.jianshu.com/p/1d9b42012ecb" target="_blank" rel="noopener">连接二</a></p>
 </blockquote>
 <h2 id="1、使用happypack开启多进程任务"><a href="#1、使用happypack开启多进程任务" class="headerlink" title="1、使用happypack开启多进程任务"></a>1、使用happypack开启多进程任务</h2><hr>
@@ -165,30 +132,114 @@
 <h3 id="4-4、在-index-html增加DLL化JS引入（必须首先引入）"><a href="#4-4、在-index-html增加DLL化JS引入（必须首先引入）" class="headerlink" title="4.4、在/index.html增加DLL化JS引入（必须首先引入）"></a>4.4、在<code>/index.html</code>增加DLL化JS引入（必须首先引入）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;/static/js/vendor.dll.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 <h3 id="4-5、-执行构建"><a href="#4-5、-执行构建" class="headerlink" title="4.5、 执行构建"></a>4.5、 执行构建</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm run dll（这一步会生成build/vendor-manifest.json和static/js/vendor.dll.js）</span><br><span class="line">npm run dev 或 npm run build</span><br></pre></td></tr></table></figure>
 
-            
-            <p class="more">
-                <a href="http://yoursite.com/2018/03/30/Vue-Cli-编译慢优化方法/">阅读剩下更多</a>
-            </p>
-        </div>
-        <div class="post-thumbnail" data-img="">
-            <a href="http://yoursite.com/2018/03/30/Vue-Cli-编译慢优化方法/" title="Vue Cli 编译慢优化方法">
-                
-                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/0.jpg" alt="默认配图" >
-                
-            </a>
-        </div>
     </div>
+    <p class="post-meta">
+        <span class="post-cat">分类：
+            <a class="cat-link" href="/categories/Vue/">Vue</a>
+        </span>
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/Vue优化/" title="Vue优化">Vue优化</a>
+    
+
+        </span>
+    </p>
 </article>
+<!-- 分享按钮 -->
 
-    
+  <div class="article-share clearfix text-center">
+    <div class="share-area">
+      <span class="share-txt">分享到：</span>
+      <a href="javascript: window.open('http://service.weibo.com/share/share.php?url=' + encodeURIComponent(location.href) + '&title=' + document.title + '&language=zh_cn');" class="share-icon weibo"></a>
+      <a href="javascript: alert('请复制链接到微信并发送');" class="share-icon wechat"></a>
+      <a href="javascript: window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodeURIComponent(location.href) + '&title=' + document.title);" class="share-icon qqzone"></a>
+      <a href="javascript: window.open('http://connect.qq.com/widget/shareqq/index.html?url=' + encodeURIComponent(location.href) + '&desc=Jelon个人博客&title=' + document.title + '&callback=' + encodeURIComponent(location.href));" class="share-icon qq"></a>
+      <a href="javascript: window.open('http://shuo.douban.com/!service/share?href=' + encodeURIComponent(location.href) + '&name=' + document.title + '&text=' + document.title);" class="share-icon douban"></a>
+    </div>
+  </div>
 
-    
-    <nav class="page-navigator">
-        <span class="page-number current">1</span>
-    </nav>
-    
 
+<!-- 上一篇/下一篇 -->
 
+<!-- 文章评论 -->
+
+  <script src="/js/comment.js"></script>
+  <div id="comments" class="comment">
+    <!--
+    <div class="sign-bar">
+      GitHub 已登录!
+      <span class="sign-link">登出</span>
+    </div>
+    <section class="box">
+      <div class="com-avatar"><img src="/img/jelon.jpg" alt="avatar"></div>
+      <div class="com-text">
+        <div class="main">
+          <textarea class="text-area-edited show" placeholder="欢迎评论！"></textarea>
+          <div class="text-area-preview"></div>
+        </div>
+        <div class="switch">
+          <div class="switch-item on">编辑</div>
+          <div class="switch-item">预览</div>
+        </div>
+        <div class="button">提交</div>
+      </div>
+    </section>
+    <section class="tips">注：评论支持 markdown 语法！</section>
+    <section class="list-wrap">
+      <ul class="list">
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">张德龙</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like liked">已赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">333333</div>
+          </div>
+        </li>
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">刘德华</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like">点赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">vvvvv</div>
+          </div>
+        </li>
+      </ul>
+      <div class="page-nav">
+        <a href="javascript: void(0);" class="item">1</a>
+        <a href="javascript: void(0);" class="item">2</a>
+        <a href="javascript: void(0);" class="item current">3</a>
+      </div>
+    </section>
+    -->
+  </div>
+  <script>
+  JELON.Comment({
+    container: 'comments',
+    label: 'Vue-Cli-编译慢优化方法' || '2018/03/30/Vue-Cli-编译慢优化方法/',
+    owner: 'jhzhu',
+    repo: 'https://github.com/zjh1002492540/zjh1002492540.github.io',
+    clientId: 'Iv1.9ed3a1babfaa8912',
+    clientSecret: '7b2fc2733b38959d5aa4f10f99be21fc60b8dc44'
+  });
+  </script>
 
 
             </div>
