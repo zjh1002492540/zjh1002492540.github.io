@@ -27,7 +27,7 @@
     <!--Title-->
 
 
-<title>分类: Web | 浩哥的博客</title>
+<title>Activity启动模式 | 浩哥的博客</title>
 
 
     <link rel="alternate" href="/atom.xml" title="浩哥的博客" type="application/atom+xml">
@@ -37,6 +37,8 @@
 
     
 
+
+    <link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
 
 
 <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css?rev=3.3.4">
@@ -130,42 +132,107 @@
     <section class="content-wrap">
         <div class="container">
             <div class="row">
-                <main class="col-md-8 main-content ">
-                    <h3> 
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="Activity启动模式">
+            
+	            Activity启动模式
+            
+        </h1>
+        <div class="post-meta">
     
-        Web 
     
-</h3>
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/Android">
+            Android
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+                
+                    <a href="/tags/Android" title='Android'>
+                        Android
+                    </a>
+                
+                    <a href="/tags/Activity模式" title='Activity模式'>
+                        Activity模式
+                    </a>
+                
+            
+        </span>
+    </span>
+    
 
-    <article class="post">
+    
         
-        <div class="post-content">
-            <div class="post-head home-post-head">
-                <h1 class="post-title"> 
-                    <a href="/2018/03/30/Vue编译速度优化/">Vue编译速度优化</a>
-                </h1>
-                <div class="post-meta">  &bull;
-                    <time class="post-date" datetime="" title="">
-                        2018年03月30日
-                    </time>
-                </div>
-            </div>
-            <p class="brief">
-                
-                    关于Vue Cli ，项目变大时，编译慢的优化方案，有更好的方案的请赐教，非常感谢
-参考链接一、连接二
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2018/04/09</span>
+        </span>
+    
+</div>
 
-1、使用happypack开启多进程任务
-123456789101112131415161718192021222324安装：n...
-                
-            </p> 
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h1 id="Activity启动模式简要概括"><a href="#Activity启动模式简要概括" class="headerlink" title="Activity启动模式简要概括"></a>Activity启动模式简要概括</h1><h3 id="1、standard，-默认模式"><a href="#1、standard，-默认模式" class="headerlink" title="1、standard， 默认模式"></a>1、<code>standard</code>， 默认模式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">默认就是该模式，进入该Activity时，不断的在任务栈中新建实例对象</span><br></pre></td></tr></table></figure>
+<h3 id="2、singleTop，栈顶复用模式"><a href="#2、singleTop，栈顶复用模式" class="headerlink" title="2、singleTop，栈顶复用模式"></a>2、<code>singleTop</code>，栈顶复用模式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> 这个模式下，有两种情况：</span><br><span class="line"></span><br><span class="line">1、如果该activity已经位于栈顶，那么将不会再生成新的实例，直接会回调该activity的onNewIntent()方法</span><br><span class="line"></span><br><span class="line">2、如果该activity不在栈顶，那么将会执行类似于standard的启动模式，新建实例</span><br></pre></td></tr></table></figure>
+<h3 id="3、singleTask-栈内复用模式"><a href="#3、singleTask-栈内复用模式" class="headerlink" title="3、singleTask,栈内复用模式"></a>3、<code>singleTask</code>,栈内复用模式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">这个模式下，有两种情况：</span><br><span class="line"></span><br><span class="line">1、如果该activity位于栈顶，类似于‘singleTop’模式，将不会再生成新的实例，直接会回调该activity的onNewIntent()方法</span><br><span class="line"></span><br><span class="line">2、如果该activity不在栈顶，那么它会将所在栈的位于自己上面的activity都弹出去（这些activity会执行onDestory()方法），然后自己到达栈顶，并且回调onNewIntent()方法</span><br></pre></td></tr></table></figure>
+<h3 id="4、singleInstance，全局唯一模式"><a href="#4、singleInstance，全局唯一模式" class="headerlink" title="4、singleInstance，全局唯一模式"></a>4、<code>singleInstance</code>，全局唯一模式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">该模式具备singleTask模式的所有特性外，与它的区别就是：</span><br><span class="line"></span><br><span class="line">1、Activity会单独占用一个Task栈，具有全局唯一性，即整个系统中就这么一个实例，由于栈内复用的特性，后续的请求均不会创建新的Activity实例，除非这个特殊的任务栈被销毁了。</span><br><span class="line"></span><br><span class="line">2、以singleInstance模式启动的Activity在整个系统中是单例的，如果在启动这样的Activiyt时，已经存在了一个实例，那么会把它所在的任务调度到前台，重用这个实例。</span><br></pre></td></tr></table></figure>
+<p><strong><a href="https://blog.csdn.net/mynameishuangshuai/article/details/51491074" target="_blank" rel="noopener">参考文章</a></strong></p>
+
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="https://github.com/zjh1002492540" target="_blank">Snippet</a>
+            
         </div>
-    </article>
- 
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+    
+        <a href="/2018/03/30/Vue编译速度优化/" class="next-post btn btn-default" title='Vue编译速度优化'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">Vue编译速度优化</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
 
 
+    <div id="comments">
+        
+	<script type="text/javascript" src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        id: 'Mon Apr 09 2018 14:12:33 GMT+0800',
+        owner:"zjh1002492540",
+        repo:"zjh1002492540.github.io",
+        oauth: {
+          client_id:"e56500d4521d2d1c5683",
+          client_secret:"d2d11e7c607014480d8c47cfe8839a4e9cd212e1"
+        },
+        perPage:"10",
+    });
+    gitment.render('comments');
+</script>
 
-
+    </div>
 
 
 
