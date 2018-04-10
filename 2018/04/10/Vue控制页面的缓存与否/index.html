@@ -27,7 +27,7 @@
     <!--Title-->
 
 
-<title>浩哥的博客</title>
+<title>Vue控制页面的缓存与否 | 浩哥的博客</title>
 
 
     <link rel="alternate" href="/atom.xml" title="浩哥的博客" type="application/atom+xml">
@@ -37,6 +37,8 @@
 
     
 
+
+    <link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
 
 
 <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css?rev=3.3.4">
@@ -130,37 +132,16 @@
     <section class="content-wrap">
         <div class="container">
             <div class="row">
-                <main class="col-md-8 main-content ">
-                    <div class="carousel">
-    <img src="/img/head-img.jpg">
-</div>
-
-
-
-
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
 <article class="post">
-    
-    <div class="post-content">
-        <div class="post-head home-post-head">
-            <h1 class="post-title">
-                <a href="/2018/04/10/Vue控制页面的缓存与否/">Vue控制页面的缓存与否</a>
-            </h1>
-            <div class="post-meta">  &bull;
-                <time class="post-date" datetime="" title="">
-                    2018年04月10日
-                </time>
-            </div>
-        </div>
-        <p class="brief">
+    <div class="post-head">
+        <h1 id="Vue控制页面的缓存与否">
             
-                Vue使用keep-alive,调用 $destory(),页面不再被缓存的解决方法Vue实现页面缓存很简单，keep-alive，实际上官方文档写的很清楚了，在需要缓存的组件外使用keep-alive包裹，我的项目中用的最多的地方就...
+	            Vue控制页面的缓存与否
             
-        </p>
-    </div>
-    
-        <footer class="post-footer clearfix">
-            <div class="pull-left tag-list">
-                <div class="post-meta">
+        </h1>
+        <div class="post-meta">
     
     
     <span class="categories-meta fa-wrap">
@@ -190,150 +171,65 @@
     
 
     
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2018/04/10</span>
+        </span>
+    
 </div>
 
-            </div>
-
-            <div class="post-permalink">
-                <a href="/2018/04/10/Vue控制页面的缓存与否/" class="btn btn-default">阅读全文</a>
-            </div>
-        </footer>
-    
-</article>
-
-
-<article class="post">
-    
-    <div class="post-content">
-        <div class="post-head home-post-head">
-            <h1 class="post-title">
-                <a href="/2018/04/09/Activity启动模式/">Activity启动模式</a>
-            </h1>
-            <div class="post-meta">  &bull;
-                <time class="post-date" datetime="" title="">
-                    2018年04月09日
-                </time>
-            </div>
-        </div>
-        <p class="brief">
             
-                Activity启动模式简要概括1、standard， 默认模式1默认就是该模式，进入该Activity时，不断的在任务栈中新建实例对象
-2、singleTop，栈顶复用模式12345 这个模式下，有两种情况：1、如果该activit...
             
-        </p>
     </div>
     
-        <footer class="post-footer clearfix">
-            <div class="pull-left tag-list">
-                <div class="post-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-        <i class="fa fa-folder-open-o"></i>
-        <a href="/categories/Android">
-            Android
-        </a>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-                
-                    <a href="/tags/Android" title='Android'>
-                        Android
-                    </a>
-                
-                    <a href="/tags/Activity模式" title='Activity模式'>
-                        Activity模式
-                    </a>
-                
-            
-        </span>
-    </span>
-    
-
-    
-</div>
-
-            </div>
-
-            <div class="post-permalink">
-                <a href="/2018/04/09/Activity启动模式/" class="btn btn-default">阅读全文</a>
-            </div>
-        </footer>
-    
-</article>
-
-
-<article class="post">
-    
-    <div class="post-content">
-        <div class="post-head home-post-head">
-            <h1 class="post-title">
-                <a href="/2018/03/30/Vue编译速度优化/">Vue编译速度优化</a>
-            </h1>
-            <div class="post-meta">  &bull;
-                <time class="post-date" datetime="" title="">
-                    2018年03月30日
-                </time>
-            </div>
-        </div>
-        <p class="brief">
-            
-                关于Vue Cli ，项目变大时，编译慢的优化方案，有更好的方案的请赐教，非常感谢
-参考链接一、连接二
-
-1、使用happypack开启多进程任务
-123456789101112131415161718192021222324安装：n...
-            
-        </p>
+    <div class="post-body post-content">
+        <h1 id="Vue使用keep-alive-调用-destory-页面不再被缓存的解决方法"><a href="#Vue使用keep-alive-调用-destory-页面不再被缓存的解决方法" class="headerlink" title="Vue使用keep-alive,调用 $destory(),页面不再被缓存的解决方法"></a>Vue使用keep-alive,调用 $destory(),页面不再被缓存的解决方法</h1><h4 id="Vue实现页面缓存很简单，keep-alive，实际上官方文档写的很清楚了，在需要缓存的组件外使用keep-alive包裹，我的项目中用的最多的地方就是Vue-Router的路由页面缓存"><a href="#Vue实现页面缓存很简单，keep-alive，实际上官方文档写的很清楚了，在需要缓存的组件外使用keep-alive包裹，我的项目中用的最多的地方就是Vue-Router的路由页面缓存" class="headerlink" title="Vue实现页面缓存很简单，keep-alive，实际上官方文档写的很清楚了，在需要缓存的组件外使用keep-alive包裹，我的项目中用的最多的地方就是Vue-Router的路由页面缓存"></a>Vue实现页面缓存很简单，<a href="https://cn.vuejs.org/v2/api/#keep-alive" target="_blank" rel="noopener">keep-alive</a>，实际上官方文档写的很清楚了，在需要缓存的组件外使用<code>keep-alive</code>包裹，我的项目中用的最多的地方就是<code>Vue-Router</code>的路由页面缓存</h4><h3 id="需求-：项目中需要开发一个导航栏，类似浏览器的导航，没有关闭的时候页面缓存，关闭之后在此打开该页面，需要初始化该页面的内容。"><a href="#需求-：项目中需要开发一个导航栏，类似浏览器的导航，没有关闭的时候页面缓存，关闭之后在此打开该页面，需要初始化该页面的内容。" class="headerlink" title="需求 ：项目中需要开发一个导航栏，类似浏览器的导航，没有关闭的时候页面缓存，关闭之后在此打开该页面，需要初始化该页面的内容。"></a><strong>需求</strong> ：项目中需要开发一个<code>导航栏</code>，类似浏览器的导航，没有关闭的时候页面缓存，关闭之后在此打开该页面，需要初始化该页面的内容。</h3><h3 id="ok，第一个想到的就是在关闭页面的时候，手动调用-Destory-方法，页面果然被销毁掉了，但是出现一个问题：再次打开被销毁的页面，该页面不再会被缓存，keep-alive对它无效啦，找了度娘和G哥，果然有这个问题，当然也有人提供了解决方案，其实Vue官方文档就有说明，"><a href="#ok，第一个想到的就是在关闭页面的时候，手动调用-Destory-方法，页面果然被销毁掉了，但是出现一个问题：再次打开被销毁的页面，该页面不再会被缓存，keep-alive对它无效啦，找了度娘和G哥，果然有这个问题，当然也有人提供了解决方案，其实Vue官方文档就有说明，" class="headerlink" title="ok，第一个想到的就是在关闭页面的时候，手动调用$Destory()方法，页面果然被销毁掉了，但是出现一个问题：再次打开被销毁的页面，该页面不再会被缓存，keep-alive对它无效啦，找了度娘和G哥，果然有这个问题，当然也有人提供了解决方案，其实Vue官方文档就有说明，"></a>ok，第一个想到的就是在关闭页面的时候，手动调用<code>$Destory()</code>方法，页面果然被销毁掉了，但是出现一个问题：再次打开被销毁的页面，该页面不再会被缓存，<code>keep-alive</code>对它无效啦，找了度娘和G哥，果然有这个<a href="https://github.com/vuejs/vue/issues/6509" target="_blank" rel="noopener">问题</a>，当然也有人提供了解决方案，其实<code>Vue</code>官方文档就有说明，</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">keep-alive 可以传入两种参数，贴一下官方说明：</span><br><span class="line"></span><br><span class="line">include 和 exclude 属性允许组件有条件地缓存。二者都可以用逗号分隔字符串、正则表达式或一个数组来表示：</span><br><span class="line">&lt; keep-alive include=&quot;a,b&quot;&gt;</span><br><span class="line">&lt; component :is=&quot;view&quot;&gt;</span><br><span class="line">&lt; /keep-alive&gt;</span><br><span class="line">&lt; !– 正则表达式 (使用 `v-bind`) –&gt;</span><br><span class="line">&lt; keep-alive :include=&quot;/a|b/&quot;&gt;</span><br><span class="line">&lt; component :is=&quot;view&quot;&gt;</span><br><span class="line">&lt; / keep-alive&gt;</span><br><span class="line">&lt; !– 数组 (使用 `v-bind`) –&gt;</span><br><span class="line">&lt; keep-alive :include=&quot;[&apos;a&apos;, &apos;b&apos;]&quot;&gt;</span><br><span class="line">&lt; component :is=&quot;view&quot;&gt;</span><br><span class="line">&lt; /keep-alive&gt;`</span><br><span class="line">匹配首先检查组件自身的 name 选项，如果 name 选项不可用，则匹配它的局部注册名称 (父组件 components 选项的&gt;&gt;键值)。匿名组件不能被匹配。</span><br><span class="line"></span><br><span class="line">keep-alive 不会在函数式组件中正常工作，因为它们没有缓存实例。</span><br></pre></td></tr></table></figure>
+<h3 id="差不多看明白了吧，销毁页面不一定调用-destory-，其实只要控制keep-alive不缓存该页面不就ok了吗-我理一下思路（include）："><a href="#差不多看明白了吧，销毁页面不一定调用-destory-，其实只要控制keep-alive不缓存该页面不就ok了吗-我理一下思路（include）：" class="headerlink" title="差不多看明白了吧，销毁页面不一定调用$destory()，其实只要控制keep-alive不缓存该页面不就ok了吗~~我理一下思路（include）："></a>差不多看明白了吧，销毁页面不一定调用<code>$destory()</code>，其实只要控制<code>keep-alive</code>不缓存该页面不就ok了吗~~我理一下思路（<code>include</code>）：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">首先在vuex里面定义一个数组 includePageNames，这个数组存放的是当前导航栏上显示的页面的名字,即name（在每个页面的Vue文件中，定义name的值）</span><br><span class="line"></span><br><span class="line">1.  当页面打开的时候，将该页面的name加（commit）到includePageNames中</span><br><span class="line"></span><br><span class="line">2.  当页面关闭的时候，将includePageNames中该页面对应的name移除掉，这时候该页面将从缓存中被移除，这不就达到我们想要的结果了吗</span><br></pre></td></tr></table></figure>
+<h2 id="具体代码我就不上了，就提一下我遇到的问题：keep-alive-给它传入includePageNames（数组），居然报错，原因是它实际上需要一个正则表达式、或者一个逗号分隔的String，没办法啦，直接将includePageNames-toString-传过去就OK啦"><a href="#具体代码我就不上了，就提一下我遇到的问题：keep-alive-给它传入includePageNames（数组），居然报错，原因是它实际上需要一个正则表达式、或者一个逗号分隔的String，没办法啦，直接将includePageNames-toString-传过去就OK啦" class="headerlink" title="具体代码我就不上了，就提一下我遇到的问题：keep-alive 给它传入includePageNames（数组），居然报错，原因是它实际上需要一个正则表达式、或者一个逗号分隔的String，没办法啦，直接将includePageNames.toString()传过去就OK啦"></a><strong>具体代码我就不上了，就提一下我遇到的问题：<code>keep-alive</code> 给它传入<code>includePageNames</code>（数组），居然报错，原因是它实际上需要一个正则表达式、或者一个逗号分隔的String，没办法啦，直接将<code>includePageNames.toString()</code>传过去就OK啦</strong></h2>
     </div>
-    
-        <footer class="post-footer clearfix">
-            <div class="pull-left tag-list">
-                <div class="post-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-        <i class="fa fa-folder-open-o"></i>
-        <a href="/categories/Web">
-            Web
-        </a>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-                
-                    <a href="/tags/Vue优化" title='Vue优化'>
-                        Vue优化
-                    </a>
-                
-                    <a href="/tags/Vue" title='Vue'>
-                        Vue
-                    </a>
-                
-            
-        </span>
-    </span>
-    
 
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="https://github.com/zjh1002492540" target="_blank">Snippet</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+    
+        <a href="/2018/04/09/Activity启动模式/" class="next-post btn btn-default" title='Activity启动模式'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">Activity启动模式</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
     
 </div>
 
-            </div>
 
-            <div class="post-permalink">
-                <a href="/2018/03/30/Vue编译速度优化/" class="btn btn-default">阅读全文</a>
-            </div>
-        </footer>
-    
-</article>
+    <div id="comments">
+        
+	<script type="text/javascript" src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        id: 'Tue Apr 10 2018 14:18:20 GMT+0800',
+        owner:"zjh1002492540",
+        repo:"zjh1002492540.github.io",
+        oauth: {
+          client_id:"e56500d4521d2d1c5683",
+          client_secret:"d2d11e7c607014480d8c47cfe8839a4e9cd212e1"
+        },
+        perPage:"10",
+    });
+    gitment.render('comments');
+</script>
 
+    </div>
 
 
 
