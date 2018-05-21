@@ -27,7 +27,7 @@
     <!--Title-->
 
 
-<title>标签: Vue优化 | 浩哥的博客</title>
+<title>Vue打包后访问静态文件失败的问题 | 浩哥的博客</title>
 
 
     <link rel="alternate" href="/atom.xml" title="浩哥的博客" type="application/atom+xml">
@@ -37,6 +37,8 @@
 
     
 
+
+    <link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
 
 
 <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css?rev=3.3.4">
@@ -130,105 +132,109 @@
     <section class="content-wrap">
         <div class="container">
             <div class="row">
-                <main class="col-md-8 main-content ">
-                    <h3> 
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="Vue打包后访问静态文件失败的问题">
+            
+	            Vue打包后访问静态文件失败的问题
+            
+        </h1>
+        <div class="post-meta">
     
-        Vue优化 
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/Web">
+            Web
+        </a>
+    </span>
     
     
-</h3>
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+                
+                    <a href="/tags/Vue优化" title='Vue优化'>
+                        Vue优化
+                    </a>
+                
+                    <a href="/tags/Vue" title='Vue'>
+                        Vue
+                    </a>
+                
+            
+        </span>
+    </span>
+    
 
-    <article class="post">
+    
         
-        <div class="post-content">
-            <div class="post-head home-post-head">
-                <h1 class="post-title"> 
-                    <a href="/2018/04/30/2018-05-10-untitled/">Vue打包后访问静态文件失败的问题</a>
-                </h1>
-                <div class="post-meta">  &bull;
-                    <time class="post-date" datetime="" title="">
-                        2018年04月30日
-                    </time>
-                </div>
-            </div>
-            <p class="brief">
-                
-                    Vue打包后访问静态文件失败的问题1、 Vue打包后，一般会生成index.html和static静态文件夹；在打开页面的时候，可能会出现静态文件访问错误的问题，一般都是路径错误导致的（PS：放在服务器根目录时，一般没有问题）修改一下...
-                
-            </p> 
-        </div>
-    </article>
- 
-    <article class="post">
-        
-        <div class="post-content">
-            <div class="post-head home-post-head">
-                <h1 class="post-title"> 
-                    <a href="/2018/04/30/Vue打包静态文件访问失败/">Vue多页面配置及打包</a>
-                </h1>
-                <div class="post-meta">  &bull;
-                    <time class="post-date" datetime="" title="">
-                        2018年04月30日
-                    </time>
-                </div>
-            </div>
-            <p class="brief">
-                
-                    Vue打包后访问静态文件失败的问题=
-1、 Vue打包后，一般会生成index.html和static静态文件夹；在打开页面的时候，可能会出现静态文件访问错误的问题，一般都是路径错误导致的（PS：放在服务器根目录时，一般没有问题）修改...
-                
-            </p> 
-        </div>
-    </article>
- 
-    <article class="post">
-        
-        <div class="post-content">
-            <div class="post-head home-post-head">
-                <h1 class="post-title"> 
-                    <a href="/2018/04/10/Vue控制页面的缓存与否/">Vue控制页面的缓存与否</a>
-                </h1>
-                <div class="post-meta">  &bull;
-                    <time class="post-date" datetime="" title="">
-                        2018年04月10日
-                    </time>
-                </div>
-            </div>
-            <p class="brief">
-                
-                    Vue使用keep-alive,调用 $destory(),页面不再被缓存的解决方法Vue实现页面缓存很简单，keep-alive，实际上官方文档写的很清楚了，在需要缓存的组件外使用keep-alive包裹，我的项目中用的最多的地方就...
-                
-            </p> 
-        </div>
-    </article>
- 
-    <article class="post">
-        
-        <div class="post-content">
-            <div class="post-head home-post-head">
-                <h1 class="post-title"> 
-                    <a href="/2018/03/30/Vue编译速度优化/">Vue编译速度优化</a>
-                </h1>
-                <div class="post-meta">  &bull;
-                    <time class="post-date" datetime="" title="">
-                        2018年03月30日
-                    </time>
-                </div>
-            </div>
-            <p class="brief">
-                
-                    关于Vue Cli ，项目变大时，编译慢的优化方案，有更好的方案的请赐教，非常感谢
-参考链接一、连接二
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2018/04/30</span>
+        </span>
+    
+</div>
 
-1、使用happypack开启多进程任务
-123456789101112131415161718192021222324安装：n...
-                
-            </p> 
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h1 id="Vue打包后访问静态文件失败的问题"><a href="#Vue打包后访问静态文件失败的问题" class="headerlink" title="Vue打包后访问静态文件失败的问题"></a>Vue打包后访问静态文件失败的问题</h1><h3 id="1、-Vue打包后，一般会生成index-html和static静态文件夹；在打开页面的时候，可能会出现静态文件访问错误的问题，一般都是路径错误导致的（PS：放在服务器根目录时，一般没有问题）"><a href="#1、-Vue打包后，一般会生成index-html和static静态文件夹；在打开页面的时候，可能会出现静态文件访问错误的问题，一般都是路径错误导致的（PS：放在服务器根目录时，一般没有问题）" class="headerlink" title="1、 Vue打包后，一般会生成index.html和static静态文件夹；在打开页面的时候，可能会出现静态文件访问错误的问题，一般都是路径错误导致的（PS：放在服务器根目录时，一般没有问题）"></a>1、 Vue打包后，一般会生成<code>index.html</code>和<code>static</code>静态文件夹；在打开页面的时候，可能会出现静态文件访问错误的问题，一般都是<code>路径</code>错误导致的（PS：放在服务器<code>根目录</code>时，一般没有问题）</h3><p>修改一下<code>vue cli</code>的配置文件：<code>/config/index.js</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">  build: &#123;</span><br><span class="line">    assetsSubDirectory: &apos;static&apos;,</span><br><span class="line">//  assetsPublicPath: &apos;/&apos;, 将这个路径改为 &apos;./&apos;，这个都懂吧，相对当前路径</span><br><span class="line">    assetsPublicPath: &apos;./&apos;,</span><br><span class="line">    proxyTable: &#123;&#125;,</span><br><span class="line">...</span><br><span class="line">	&#125;</span><br><span class="line">...</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="http://138.128.207.213/imgs/0001.png" alt="0001"></p>
+<h3 id="2、可能会发生资源文件加载了，但是页面却没有渲染成功的问题："><a href="#2、可能会发生资源文件加载了，但是页面却没有渲染成功的问题：" class="headerlink" title="2、可能会发生资源文件加载了，但是页面却没有渲染成功的问题："></a>2、可能会发生资源文件加载了，但是页面却没有渲染成功的问题：</h3><p>原因是可能是你开启了<code>HTML5 History Mode</code>（毕竟地址栏里面多个<code>#</code>看得很不爽的了！）<br>解决方法：<br>1、<code>路由地址</code>配置错误，导致路由没法找到目标的组件，从而渲染失败，解决方法配置路由路径咯</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">export default new Router(&#123;</span><br><span class="line">  mode: &apos;history&apos;,</span><br><span class="line">  routes: [</span><br><span class="line">    &#123;</span><br><span class="line">      path: process.env.NODE_ENV == &apos;development&apos; ? </span><br><span class="line">			&apos;/spjxc.html&apos; : &apos;/jixiao/report/spjxc.html&apos;,</span><br><span class="line">      name: &apos;spjxc&apos;,</span><br><span class="line">      component: spjxc</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p><img src="http://138.128.207.213/imgs/0002.png" alt="0002"></p>
+<p>2、或者需要在服务端配置一下啦<a href="https://router.vuejs.org/zh-cn/essentials/history-mode.html" target="_blank" rel="noopener">官网说明</a>；<code>或者</code>检查一下你的<code>router</code>地址，（我自己就是这个原因），</p>
+
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="https://github.com/zjh1002492540" target="_blank">Snippet</a>
+            
         </div>
-    </article>
- 
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+    
+        <a href="/2018/04/30/Vue打包静态文件访问失败/" class="next-post btn btn-default" title='Vue多页面配置及打包'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">Vue多页面配置及打包</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
 
 
+    <div id="comments">
+        
+	<script type="text/javascript" src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        id: 'Mon Apr 30 2018 21:17:21 GMT+0800',
+        owner:"zjh1002492540",
+        repo:"zjh1002492540.github.io",
+        oauth: {
+          client_id:"e56500d4521d2d1c5683",
+          client_secret:"d2d11e7c607014480d8c47cfe8839a4e9cd212e1"
+        },
+        perPage:"10",
+    });
+    gitment.render('comments');
+</script>
+
+    </div>
 
 
 

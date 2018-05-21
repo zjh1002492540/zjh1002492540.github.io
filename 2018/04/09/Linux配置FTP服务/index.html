@@ -27,7 +27,7 @@
     <!--Title-->
 
 
-<title>标签: Vue优化 | 浩哥的博客</title>
+<title>Linux配置FTP服务 | 浩哥的博客</title>
 
 
     <link rel="alternate" href="/atom.xml" title="浩哥的博客" type="application/atom+xml">
@@ -37,6 +37,8 @@
 
     
 
+
+    <link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
 
 
 <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css?rev=3.3.4">
@@ -130,105 +132,112 @@
     <section class="content-wrap">
         <div class="container">
             <div class="row">
-                <main class="col-md-8 main-content ">
-                    <h3> 
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="Linux配置FTP服务">
+            
+	            Linux配置FTP服务
+            
+        </h1>
+        <div class="post-meta">
     
-        Vue优化 
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/Linux">
+            Linux
+        </a>
+    </span>
     
     
-</h3>
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+                
+                    <a href="/tags/Linux" title='Linux'>
+                        Linux
+                    </a>
+                
+            
+        </span>
+    </span>
+    
 
-    <article class="post">
+    
         
-        <div class="post-content">
-            <div class="post-head home-post-head">
-                <h1 class="post-title"> 
-                    <a href="/2018/04/30/2018-05-10-untitled/">Vue打包后访问静态文件失败的问题</a>
-                </h1>
-                <div class="post-meta">  &bull;
-                    <time class="post-date" datetime="" title="">
-                        2018年04月30日
-                    </time>
-                </div>
-            </div>
-            <p class="brief">
-                
-                    Vue打包后访问静态文件失败的问题1、 Vue打包后，一般会生成index.html和static静态文件夹；在打开页面的时候，可能会出现静态文件访问错误的问题，一般都是路径错误导致的（PS：放在服务器根目录时，一般没有问题）修改一下...
-                
-            </p> 
-        </div>
-    </article>
- 
-    <article class="post">
-        
-        <div class="post-content">
-            <div class="post-head home-post-head">
-                <h1 class="post-title"> 
-                    <a href="/2018/04/30/Vue打包静态文件访问失败/">Vue多页面配置及打包</a>
-                </h1>
-                <div class="post-meta">  &bull;
-                    <time class="post-date" datetime="" title="">
-                        2018年04月30日
-                    </time>
-                </div>
-            </div>
-            <p class="brief">
-                
-                    Vue打包后访问静态文件失败的问题=
-1、 Vue打包后，一般会生成index.html和static静态文件夹；在打开页面的时候，可能会出现静态文件访问错误的问题，一般都是路径错误导致的（PS：放在服务器根目录时，一般没有问题）修改...
-                
-            </p> 
-        </div>
-    </article>
- 
-    <article class="post">
-        
-        <div class="post-content">
-            <div class="post-head home-post-head">
-                <h1 class="post-title"> 
-                    <a href="/2018/04/10/Vue控制页面的缓存与否/">Vue控制页面的缓存与否</a>
-                </h1>
-                <div class="post-meta">  &bull;
-                    <time class="post-date" datetime="" title="">
-                        2018年04月10日
-                    </time>
-                </div>
-            </div>
-            <p class="brief">
-                
-                    Vue使用keep-alive,调用 $destory(),页面不再被缓存的解决方法Vue实现页面缓存很简单，keep-alive，实际上官方文档写的很清楚了，在需要缓存的组件外使用keep-alive包裹，我的项目中用的最多的地方就...
-                
-            </p> 
-        </div>
-    </article>
- 
-    <article class="post">
-        
-        <div class="post-content">
-            <div class="post-head home-post-head">
-                <h1 class="post-title"> 
-                    <a href="/2018/03/30/Vue编译速度优化/">Vue编译速度优化</a>
-                </h1>
-                <div class="post-meta">  &bull;
-                    <time class="post-date" datetime="" title="">
-                        2018年03月30日
-                    </time>
-                </div>
-            </div>
-            <p class="brief">
-                
-                    关于Vue Cli ，项目变大时，编译慢的优化方案，有更好的方案的请赐教，非常感谢
-参考链接一、连接二
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2018/04/09</span>
+        </span>
+    
+</div>
 
-1、使用happypack开启多进程任务
-123456789101112131415161718192021222324安装：n...
-                
-            </p> 
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h1 id="Linux配置FTP服务"><a href="#Linux配置FTP服务" class="headerlink" title="Linux配置FTP服务"></a>Linux配置FTP服务</h1><h2 id="1、安装ftp服务"><a href="#1、安装ftp服务" class="headerlink" title="1、安装ftp服务"></a>1、安装ftp服务</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">ubuntu下命令： </span><br><span class="line">sudo apt-get install vsftpd</span><br><span class="line">查看安装结果： </span><br><span class="line">vsftpd -version</span><br><span class="line"></span><br><span class="line">centos下命令：</span><br><span class="line">检查是否安装： rpm -qa |grep vsftpd</span><br><span class="line">安装命令：     yum install vsftpd -y</span><br></pre></td></tr></table></figure>
+<h2 id="2、新建用于ftp服务的工作目录"><a href="#2、新建用于ftp服务的工作目录" class="headerlink" title="2、新建用于ftp服务的工作目录"></a>2、新建用于ftp服务的工作目录</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /home/ftp</span><br></pre></td></tr></table></figure>
+<h2 id="3、新建FTP用户并设置密码以及工作目录"><a href="#3、新建FTP用户并设置密码以及工作目录" class="headerlink" title="3、新建FTP用户并设置密码以及工作目录"></a>3、新建FTP用户并设置密码以及工作目录</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">useradd -d /home/ftp -s /bin/bash username  #新建用户</span><br><span class="line">passwd username  #为用户设置密码</span><br></pre></td></tr></table></figure>
+<h2 id="4、修改ftp服务的配置文件-vsftpd-conf"><a href="#4、修改ftp服务的配置文件-vsftpd-conf" class="headerlink" title="4、修改ftp服务的配置文件 vsftpd.conf"></a>4、修改ftp服务的配置文件 <code>vsftpd.conf</code></h2><h4 id="（该文件目录：-ubuntu系统在-etc-vsftpd-conf，centos系统在-etc-vsftpd-vsftpd-conf）"><a href="#（该文件目录：-ubuntu系统在-etc-vsftpd-conf，centos系统在-etc-vsftpd-vsftpd-conf）" class="headerlink" title="（该文件目录： ubuntu系统在 /etc/vsftpd.conf，centos系统在 /etc/vsftpd/vsftpd.conf）"></a><em>（该文件目录： ubuntu系统在 /etc/vsftpd.conf，centos系统在 /etc/vsftpd/vsftpd.conf）</em></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">anonymous_enable=NO  #禁止匿名访问 </span><br><span class="line">local_enable=YES </span><br><span class="line">write_enable =YES</span><br></pre></td></tr></table></figure>
+<h2 id="5、设置FTP服务"><a href="#5、设置FTP服务" class="headerlink" title="5、设置FTP服务"></a>5、设置FTP服务</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">service vsftpd start #启动ftp命令</span><br><span class="line">service vsftpd stop #停止ftp命令</span><br><span class="line">service vsftpd restart #重启ftp命</span><br></pre></td></tr></table></figure>
+<h2 id="6、浏览器打开FTP"><a href="#6、浏览器打开FTP" class="headerlink" title="6、浏览器打开FTP"></a>6、浏览器打开FTP</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ftp://ip地址</span><br></pre></td></tr></table></figure>
+<h2 id="7、其它操作"><a href="#7、其它操作" class="headerlink" title="7、其它操作"></a>7、其它操作</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#在root用户下：  </span><br><span class="line">userdel -r newuser  </span><br><span class="line">#在普通用户下：  </span><br><span class="line">sudo userdel -r newuser</span><br></pre></td></tr></table></figure>
+<hr>
+<p><a href="https://www.linuxidc.com/Linux/2016-12/138563.htm" target="_blank" rel="noopener">参考文章</a></p>
+
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="https://github.com/zjh1002492540" target="_blank">Snippet</a>
+            
         </div>
-    </article>
- 
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2018/04/10/Vue控制页面的缓存与否/" class="pre-post btn btn-default" title='Vue控制页面的缓存与否'>
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">Vue控制页面的缓存与否</span>
+        </a>
+    
+    
+        <a href="/2018/04/09/Activity启动模式/" class="next-post btn btn-default" title='Activity启动模式'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">Activity启动模式</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
 
 
+    <div id="comments">
+        
+	<script type="text/javascript" src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        id: 'Mon Apr 09 2018 14:12:33 GMT+0800',
+        owner:"zjh1002492540",
+        repo:"zjh1002492540.github.io",
+        oauth: {
+          client_id:"e56500d4521d2d1c5683",
+          client_secret:"d2d11e7c607014480d8c47cfe8839a4e9cd212e1"
+        },
+        perPage:"10",
+    });
+    gitment.render('comments');
+</script>
+
+    </div>
 
 
 
